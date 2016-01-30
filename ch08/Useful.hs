@@ -18,4 +18,4 @@ rename old new = do
     f old new
 
 cc2cpp =
-  mapM (renameWith (flip replaceExtension ".cpp")) =<< namesMatching "*.cc"
+  mapM (renameWith (`replaceExtension` ".cpp")) =<< namesMatching "*.cc"
